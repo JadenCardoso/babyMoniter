@@ -38,7 +38,7 @@ function draw(){
     if(status != ""){
         objectDetecter.detect(video, gotResult);
         for (i=0; i>objects.length; i++){
-            if (objects[i] == "person"){
+            if (objects[i].label == "person"){
             document.getElementById("Status").innerHTML = "Status: Object Detected";
             fill(r, g, b);
             percent = floor(objects[i].confidence * 100);
